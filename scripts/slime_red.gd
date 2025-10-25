@@ -9,6 +9,10 @@ var direction : int = 1
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _process(delta: float) -> void:
+	move_horizontal(delta)
+	
+	
+func move_horizontal(delta: float) -> void:
 	if ray_cast_right.is_colliding():
 		direction = -1
 		animated_sprite.flip_h = true
@@ -16,3 +20,4 @@ func _process(delta: float) -> void:
 		direction = 1
 		animated_sprite.flip_h = false
 	position.x = position.x + direction * SPEED * delta
+	
