@@ -14,3 +14,7 @@ config/name="example_platformer"
 run/main_scene="uid://mofg0lby813d"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
