@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1qdy7yhcxha1"]
+
+[ext_resource type="Texture2D" uid="uid://cgmerueakpmbc" path="res://assets/sprites/world_tileset.png" id="1_ti2qy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0o63"]
+atlas = ExtResource("1_ti2qy")
+region = Rect2(80, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij75p"]
+atlas = ExtResource("1_ti2qy")
+region = Rect2(80, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o74y7"]
+atlas = ExtResource("1_ti2qy")
+region = Rect2(80, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efpf2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0o63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij75p")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_o74y7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij75p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.6
+}]
+
+[node name="orange_bush" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_efpf2")
+autoplay = "default"
+frame_progress = 0.72709703

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://mofg0lby813d"]
+[gd_scene load_steps=17 format=3 uid="uid://mofg0lby813d"]
 
 [ext_resource type="Texture2D" uid="uid://cef21v64gggyk" path="res://assets/sprites/orange_leaf.png" id="1_gee14"]
 [ext_resource type="Script" uid="uid://nx3vvsfdh6mg" path="res://scripts/game_manager.gd" id="1_u5sy4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://772r6racme1i" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://7is31yfx1vv" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dhaviihkbh6db" path="res://scenes/slime_red.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c1qdy7yhcxha1" path="res://scenes/orange_bush.tscn" id="9_0tnpc"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0tnpc"]
 particle_flag_disable_z = true
@@ -238,7 +239,7 @@ z_index = 1
 position = Vector2(349, -318)
 amount = 400
 texture = ExtResource("1_gee14")
-lifetime = 5.0
+lifetime = 7.0
 preprocess = 10.0
 speed_scale = 0.4
 visibility_rect = Rect2(-600, -100, 1200, 800)
@@ -316,3 +317,14 @@ position = Vector2(-25, -95)
 
 [node name="slime_red" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(504, -48)
+
+[node name="Bushes" type="Node" parent="."]
+
+[node name="orange_bush" parent="Bushes" instance=ExtResource("9_0tnpc")]
+position = Vector2(40, -23)
+
+[node name="orange_bush2" parent="Bushes" instance=ExtResource("9_0tnpc")]
+position = Vector2(280, -87)
+
+[node name="orange_bush3" parent="Bushes" instance=ExtResource("9_0tnpc")]
+position = Vector2(529, -56)
